@@ -55,7 +55,7 @@ let UserRegister = () => {
      let password = user.password.trim();
 
    const { status } = await axios.post(
-     "https://devroom-backend.onrender.com/api/users/register",
+     "https://devroombackend.onrender.com/api/users/register",
      { name, email, password },
      {
        headers: {

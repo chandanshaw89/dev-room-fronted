@@ -22,7 +22,7 @@ let Dashboard = () => {
 
   const getProfile = async () => {
     let { status, data } = await axios.get(
-      "https://devroom-backend.onrender.com/api/profiles/me",
+      "https://devroombackend.onrender.com/api/profiles/me",
       {
         headers: {
           "Content-Type": "application/json",
@@ -36,7 +36,7 @@ let Dashboard = () => {
 
   const getUser = async () => {
     let { data } = await axios.get(
-      "https://devroom-backend.onrender.com/api/users/me",
+      "https://devroombackend.onrender.com/api/users/me",
       {
         headers: {
           "Content-Type": "application/json",
@@ -58,7 +58,7 @@ let Dashboard = () => {
 
   let clickDeleteExperience = async (experienceId) => {
     const { data } = await axios.delete(
-      `https://devroom-backend.onrender.com/api/profiles/experience/${experienceId}`,
+      `https://devroombackend.onrender.com/api/profiles/experience/${experienceId}`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -72,7 +72,7 @@ let Dashboard = () => {
 
   let clickDeleteEducation = async (educationId) => {
     const { data } = await axios.delete(
-      ` https://devroom-backend.onrender.com/api/profiles/education/${educationId}`,
+      ` https://devroombackend.onrender.com/api/profiles/education/${educationId}`,
       {
         headers: {
           "Content-Type": "application/json",

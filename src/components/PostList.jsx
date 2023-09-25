@@ -50,7 +50,7 @@ let PostList = () => {
 
 
    const getUser = async () => {
-     let { data } = await axios.get("https://devroom-backend.onrender.com/api/users/me", {
+     let { data } = await axios.get("https://devroombackend.onrender.com/api/users/me", {
        headers: {
          "Content-Type": "application/json",
          Authorization: `Bearer ${localStorage.getItem("devroom")}`,
@@ -61,7 +61,7 @@ let PostList = () => {
    };
 
     const getPosts = async () => {
-      let { data } = await axios.get("https://devroom-backend.onrender.com/api/posts/", {
+      let { data } = await axios.get("https://devroombackend.onrender.com/api/posts/", {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${localStorage.getItem("devroom")}`,
@@ -92,7 +92,7 @@ let PostList = () => {
     e.preventDefault();
     if (localPost.text.trim() !== "")
     {
-      const {data} =  await axios.post("https://devroom-backend.onrender.com/api/posts/",localPost,{
+      const {data} =  await axios.post("https://devroombackend.onrender.com/api/posts/",localPost,{
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage.getItem("devroom")}`,
@@ -110,7 +110,7 @@ let PostList = () => {
   };
 
   let clickDeletePost = async (postId) => {
-    const { data } = await axios.delete(`https://devroom-backend.onrender.com/api/posts/${postId}`, {
+    const { data } = await axios.delete(`https://devroombackend.onrender.com/api/posts/${postId}`, {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage.getItem("devroom")}`,
@@ -125,7 +125,7 @@ let PostList = () => {
   };
 
   let clickLikePost = async(postId) => {
-    const {data} = await axios.put(`https://devroom-backend.onrender.com/api/posts/like/${postId}`,{},{
+    const {data} = await axios.put(`https://devroombackend.onrender.com/api/posts/like/${postId}`,{},{
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage.getItem("devroom")}`,

@@ -12,7 +12,7 @@ let DeveloperDetails = () => {
   let developerId = useParams().developerId;
 
   const fetchDeveloper = async() =>{
-    const {data} = await axios.get(`https://devroom-backend.onrender.com/api/profiles/${developerId}`, {
+    const {data} = await axios.get(`https://devroombackend.onrender.com/api/profiles/${developerId}`, {
       headers: {
         "Content-Type": "application/json",
       },
